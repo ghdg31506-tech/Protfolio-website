@@ -5,15 +5,14 @@ const sixContainerEl = document.querySelectorAll(".sixContainer");
 
 const firstcontainerEl = document.querySelectorAll(".firstcontainer");
 
-function animate() {
-    if (moteEl.classList.contains("motion")) {
-        moteEl.classList.remove("motion")
-    } else {
-        moteEl.classList.add("motion");
-    }
-}
+const fourhtChildEl = document.querySelectorAll(".fourhtChild");
 
-setInterval(3000, animate())
+const fiveChildEl = document.querySelectorAll(".fiveChild");
+
+const sidebarEl = document.querySelectorAll(".sidebar");
+
+const secondContainerEl = document.querySelectorAll(".secondContainer");
+
 
 
 const observer = new IntersectionObserver((entries) => {
@@ -26,10 +25,17 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
+
 thirdContainerEl.forEach((el) => observer.observe(el));
 
 firstcontainerEl.forEach((el) => observer.observe(el));
 
+fourhtChildEl.forEach((el) => observer.observe(el));
 
+fiveChildEl.forEach((el) => observer.observe(el));
 
+sixContainerEl.forEach((el) => observer.observe(el));
 
+sidebarEl.forEach((el) => observer.observe(el));
+
+secondContainerEl.forEach((el) => observer.observe(el));

@@ -16,6 +16,7 @@ body {
     height: 90vh;
     opacity: 0;
     transition: all 2s ease;
+    position: relative;
 }
 
 .sidebar {
@@ -88,6 +89,109 @@ body {
     height: 40px;
     background-color: rgba(255, 255, 255, 0.1);
 }
+
+.form {
+    opacity: 0;
+    height: 800px;
+    width: 450px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #7B7F85;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 7px rgba(255, 255, 255, 0.4);
+    border: 1px solid lightgray;
+    z-index: 6;
+    text-align: center;
+    padding: 10px;
+    transition: all 1s ease-in-out;
+}
+
+.formChild img {
+    object-fit: cover;
+    border-radius: 5px;
+    width: 70%;
+    height: 70%;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.heading {
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    text-shadow: 4px 4px rgba(0,0,0,0.2);
+}
+
+.ptext {
+    color: white;
+    font-size: 20px;
+}
+
+.list {
+    list-style: none;
+    font-size: 30px;
+    color: white;
+}
+
+
+.times {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.times:hover {
+    color: black;
+}
+
+.times:active {
+    transform: scale(1.03);
+}
+
+
+
+
+.comment {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: lightgreen;
+    border-radius: 20px;
+    width: 700px;
+    height: 700px;
+    box-shadow: 0 4px 4px rgba(255, 255, 255, 0.7);
+    z-index: 6;
+    padding: 20px;
+}
+
+.comment div {
+    position: relative;
+}
+
+.comment h2 {
+    font-family: cursive;
+}
+
+#commentText {
+    border: none;
+    background-color: transparent;
+    width: 90%;
+    height: 90%;
+    padding: 20px;
+    outline: none;
+    font-size: 24px;
+}
+
+.opacit {
+    opacity: 1;
+}
+
 
 .imageContainer {
     height: 280px;
@@ -331,19 +435,48 @@ body {
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 700px) {
     .text {
         width: 100%;
         font-size: 50px;
-        bottom: -300px;
+        bottom: -30px;
+    }
+
+    .form {
+        height: 600px;
+        width: 240px;
+    }
+
+    .ptext {
+        font-size: 10px;
+    }
+
+   
+    .fa-solid {
+        right: 2px;
+        top: 2px;
+    }
+
+    .firstcontainer {
+        margin-top: 100px;
     }
 
     .imageContainer {
         height: 80px;
     }
 
+    .comment {
+        width: 250px;
+        height: 250px;
+    }
+
+     .comment div h2 {
+        font-size: 15px;
+        max-width: 80%;
+    }
+
     .image {
-        width: 100%;
+        width: 70%;
     }
 
     .letter {

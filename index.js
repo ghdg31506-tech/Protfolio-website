@@ -13,7 +13,41 @@ const sidebarEl = document.querySelectorAll(".sidebar");
 
 const secondContainerEl = document.querySelectorAll(".secondContainer");
 
+const btnEl = document.querySelector(".btn");
 
+const formEl = document.querySelector(".form");
+
+const timesEl = document.querySelector(".times");
+
+const messageEl = document.querySelector(".message");
+
+const commentEl = document.querySelector(".comment");
+
+const okEl = document.querySelector(".fa-solid");
+
+messageEl.addEventListener("click", () => {
+    commentEl.style.display = "inline";
+});
+
+okEl.addEventListener("click", () => {
+    commentEl.style.display = "none";
+})
+
+
+
+
+function showForm() {
+    formEl.classList.add("opacit");
+}
+
+
+btnEl.addEventListener("click" ,() => {
+    showForm();
+} )
+
+timesEl.addEventListener("click", () => {
+    formEl.classList.remove("opacit")
+})
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -39,3 +73,5 @@ sixContainerEl.forEach((el) => observer.observe(el));
 sidebarEl.forEach((el) => observer.observe(el));
 
 secondContainerEl.forEach((el) => observer.observe(el));
+
+
